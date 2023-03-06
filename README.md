@@ -26,7 +26,7 @@ source .env
 ### HOW TO HACK
 
 #### ⑂ Fork Goerli testnet state
-Fork Goerli into Anvil in your terminal to retrieve Ethernaut's core contracts and levels:
+Open a new terminal window then fork Goerli into Anvil in your terminal to retrieve Ethernaut's core contracts and levels:
 ```bash
 # This is the Goerli Infura Demo endpoint, you can change it if needed
 anvil --fork-url "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
@@ -34,7 +34,7 @@ anvil --fork-url "https://goerli.infura.io/v3/9aa3d95b3bc440fa88ea12eaa4456161"
 
 #### ‣ Start your box
 
-Switch to another terminal window then run the `StartBox` script to deploy your Box contract on the forked local environment:
+Get back to the project terminal window then run the `StartBox` script to deploy your Box contract on the forked local environment:
 ```bash
 forge script StartBox --broadcast --rpc-url $LOCALHOST
 ```
@@ -57,7 +57,7 @@ Script ran successfully.
 
 #### ⎌ Load a level instance into your box
 You can load a level instance into your box by running the `GetInstance` script with the level name as argument.
-The script will call the main Ethernaut contract that will then deploy a new fresh instance of the level for you. For example, to load the `HelloEthernaut` level into your box:
+The script will call the main Ethernaut contract that will then deploy a new instance of the level for you. For example, to load the `HelloEthernaut` level into your box:
 ```bash
 forge script GetInstance \
 --sig "run(string)" "HelloEthernaut" \
@@ -132,7 +132,7 @@ For example, you can load the player address into a test file by retrieving it a
 - `$PLAYER_PK` is your Anvil private key (Anvil PK key 0). Use it to sign TXs while using `cast send` or broadcasting script instructions.
 - `$PLAYER` is your Anvil address (Anvil Account key 0) derived from the above private key. Use it to "prank" accounts in your tests or, for example, as `--from` value in the CLI.
 
-**If the variables are not defined at first or if you modify them inside the `.env` file, use the `source .env` command afterward to load them into your environment.**
+**If the variables are not defined at first or if you modify them inside the `.env` file, use the `source .env` command to load them into your environment.**
 
 
 ### LEVELS
