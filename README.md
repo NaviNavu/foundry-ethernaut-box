@@ -45,9 +45,11 @@ Script ran successfully.
 
 == Logs ==
 
-  Box deployed at: 0x...
-  You can now load a level instance into your box by running the GetInstance script:
-  > forge script GetInstance --sig "run(string)" "HelloEthernaut" --rpc-url $LOCALHOST --broadcast
+  [ Ethernaut x Foundry Box ]
+  Your Box has been correctly deployed at 0x... 
+  Available scripts:
+  - GetInstance (Loads a level instance into your Box) -> forge script GetInstance --sig "run(string)" "HelloEthernaut" --rpc-url $LOCALHOST --broadcast
+  - SubmitInstance (Submits your current level instance) -> forge script SubmitInstance --rpc-url $LOCALHOST --broadcast --private-key $PLAYER_PK
 
   ## Setting up (1) EVMs.
 
@@ -71,9 +73,10 @@ Script ran successfully.
 
 == Logs ==
 
-  [ HelloEthernaut ]
-  Level instance: 0x... 
-  Happy hacking!
+[ HelloEthernaut ]
+  Level instance deployed at 0x... and correctly loaded into your Box.
+  
+Happy hacking!
 
 ## Setting up (1) EVMs.
 
