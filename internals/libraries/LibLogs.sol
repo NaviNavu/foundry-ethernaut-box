@@ -26,7 +26,7 @@ library LibLogs {
 
             console2.log(StdStyle.bold(StdStyle.green(str)));
         } else {
-            console2.log(StdStyle.bold(StdStyle.red("[ NOPE! :( ]")));
+            console2.log(StdStyle.bold(StdStyle.red("\n[ NOPE! :( ]")));
         }
     }
 
