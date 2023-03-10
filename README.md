@@ -118,8 +118,13 @@ Script ran successfully.
 
 Or the following if the exploit failed:
 ```bash
-Error: 
-[ NOPE :( ]
+== Logs ==
+  
+[ NOPE! :( ]
+
+## Setting up (1) EVMs.
+
+==========================
 ```
 
 
