@@ -8,6 +8,7 @@ pragma solidity ^0.8.0;
 import "forge-std/Script.sol";
 import "forge-std/Vm.sol";
 import { Ethernaut, Level } from "internals/ethernaut-core/Ethernaut.sol";
+import { LibLogs } from "internals/libraries/LibLogs.sol";
 import { Box } from "internals/contracts/Box.sol";
 import { EnvironmentData } from "internals/EnvironmentData.sol";
 import { LevelCollection } from "internals/LevelCollection.sol";
@@ -39,12 +40,6 @@ contract GetInstance is Script, EnvironmentData, LevelCollection {
         box.setCurrentLevelInstance(payable(instanceAddress));
         vm.stopBroadcast();
 
-        _logLevelInstanceCreation(_levelName, instanceAddress);
-    }
-
-    function _logLevelInstanceCreation(string memory levelName, address at) private view  {
-        console.log("\n[ %s ]", levelName);
-        console.log("Level instance: %s ", at);
-        console.log("Happy hacking!");
+        LibLogs.logLevelInstanceCreation(_levelName, instanceAddress);
     }
 }
