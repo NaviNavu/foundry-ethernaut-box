@@ -5,12 +5,11 @@ pragma solidity ^0.8.0;
 * Author: Navinavu (https://github.com/NaviNavu)
 *************************************************/
 
-import "forge-std/Script.sol";
 import { LibLogs } from "internals/libraries/LibLogs.sol";
 import { Box } from "internals/contracts/Box.sol";
-import { EnvironmentData } from "internals/EnvironmentData.sol";
+import { Environment } from "internals/Environment.sol";
 
-contract StartBox is Script, EnvironmentData {
+contract StartBox is Environment {
     function run() public {
         require(envData.box.code.length == 0, 
             "The Box is already running. To kill it, restart or quit Anvil."

@@ -5,15 +5,14 @@ pragma solidity ^0.8.0;
 * Author: Navinavu (https://github.com/NaviNavu)
 *************************************************/
 
-import "forge-std/Script.sol";
-import "forge-std/Vm.sol";
+import { Vm } from "forge-std/Vm.sol";
 import { Ethernaut, Level } from "internals/ethernaut-core/Ethernaut.sol";
 import { LibLogs } from "internals/libraries/LibLogs.sol";
 import { Box } from "internals/contracts/Box.sol";
-import { EnvironmentData } from "internals/EnvironmentData.sol";
+import { Environment } from "internals/Environment.sol";
 import { LevelCollection } from "internals/LevelCollection.sol";
 
-contract GetInstance is Script, EnvironmentData, LevelCollection {
+contract GetInstance is Environment, LevelCollection {
     function run(string memory _levelName) public {
         require(envData.box.code.length > 0, 
             "The Box is not started. Use the StartBox script to start it: forge script StartBox --broadcast --rpc-url local"
