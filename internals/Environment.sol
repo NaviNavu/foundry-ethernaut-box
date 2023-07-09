@@ -21,6 +21,6 @@ abstract contract Environment is Script {
       envData.playerPK = vm.envUint("PLAYER_PK");
       envData.player = vm.rememberKey(envData.playerPK);
       envData.ethernaut = address(0xD2e5e0102E55a5234379DD796b8c641cd5996Efd);
-      envData.box = address(0x3bf380e9F4fc81cbB8b842C3c3ecf90168cb5A49);
+      envData.box = address(0x6E7Fbf0003bc0c8e1A5B65C05321a6F40105Aed8);
     }
 }
